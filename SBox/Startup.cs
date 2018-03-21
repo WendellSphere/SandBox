@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.SpaServices.Webpack;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using System.Web.Optimization;
+using SBox.ClientApp;
 
 namespace SBox
 {
@@ -23,7 +25,7 @@ namespace SBox
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
+            //services.AddTransient<BundleConfig, BundleConfig>();
             services.AddTransient<IConfigurationBuilder, ConfigurationBuilder>();
             services.AddMvc();
         }
@@ -49,6 +51,8 @@ namespace SBox
             }
 
             app.UseStaticFiles();
+
+            BundleConfig.RegisterBundles(BundleTable.Bundles);
 
             app.UseMvc(routes =>
             {

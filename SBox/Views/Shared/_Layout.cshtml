@@ -1,18 +1,26 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - SBox</title>
     <base href="~/" />
-
+    @*<link href="~/ClientApp/ArcadiaTheme/css/animate.css" rel="stylesheet" />
+    <link href="~/ClientApp/ArcadiaTheme/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/ClientApp/ArcadiaTheme/css/jasny-bootstrap.min.css" rel="stylesheet" />
+    <link href="~/ClientApp/ArcadiaTheme/css/owl.carousel.css" rel="stylesheet" />
+    <link href="~/ClientApp/ArcadiaTheme/css/owl.theme.css" rel="stylesheet" />
+    <link href="~/ClientApp/ArcadiaTheme/css/responsive.css" rel="stylesheet" />
+    <link href="~/ClientApp/ArcadiaTheme/css/style.css" rel="stylesheet" />*@
     <link rel="stylesheet" href="~/dist/vendor.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/dist/site.css" asp-append-version="true" />
+
 </head>
 <body>
     @RenderBody()
 
     <script src="~/dist/vendor.js" asp-append-version="true"></script>
-    @RenderSection("scripts", required: false)
+    
+
 </body>
 </html>
